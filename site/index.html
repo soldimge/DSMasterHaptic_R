@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MX Master 4 Haptics Control</title>
+<style>
+  :root {
+    --bg: #2b2b2b;
+    --panel: #3a3a3a;
+    --text: #e6e6e6;
+    --muted: #a8a8a8;
+    --accent: #6b7d3a;
+    --accent-dark: #556b2f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+  h1 { font-size: 32px; margin: 0 0 8px; }
+  h2 { font-size: 20px; margin: 40px 0 12px; }
+  p, li { color: var(--text); }
+  .lead { color: var(--muted); font-size: 18px; margin: 0 0 32px; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .button {
+    display: inline-block;
+    background: var(--accent);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .button:hover { background: var(--accent-dark); }
+  .meta { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  .panel {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 16px;
+  }
+  code {
+    background: #262626;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  footer { color: var(--muted); font-size: 14px; margin-top: 56px; }
+  a { color: #9cc26a; }
+</style>
+</head>
+<body>
+<main>
+  <h1>MX Master 4 Haptics Control</h1>
+  <p class="lead">Haptic feedback for the Logi MX Master 4 mouse on macOS. Every left click is followed by a vibration, so you feel each press without looking at the screen.</p>
+
+  <a class="button" href="DSMasterHaptic-0.1.dmg" download>Download for macOS (.dmg)</a>
+  <p class="meta">Version 0.1 · Apple Silicon (M1 or newer) · about 60 MB</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Vibration on every left click, in any app.</li>
+    <li>15 vibration types: Sharp Collision, Knock, Mad, Jingle, Firework, Wave, Ringing, and more.</li>
+    <li>Turn the feedback on or off with one switch.</li>
+    <li>Your chosen vibration type is saved between launches.</li>
+  </ul>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>A Mac with Apple Silicon and macOS.</li>
+    <li>Logi MX Master 4 mouse.</li>
+    <li>Logi Options+ with the HapticWeb plugin installed.</li>
+    <li>Accessibility permission for the app in macOS System Settings. The app needs it to see mouse clicks.</li>
+  </ul>
+
+  <h2>Installation</h2>
+  <ol>
+    <li>Download and open the DMG file.</li>
+    <li>Drag <strong>DSMasterHaptic</strong> into the Applications folder.</li>
+    <li>On first launch, macOS may say the developer cannot be verified. Open System Settings → Privacy &amp; Security and click <strong>Open Anyway</strong>.</li>
+    <li>If that option does not appear, run this in Terminal and open the app again:
+      <div class="panel"><code>xattr -dr com.apple.quarantine /Applications/DSMasterHaptic.app</code></div>
+    </li>
+    <li>Grant Accessibility permission (System Settings → Privacy &amp; Security → Accessibility), then turn on the feedback switch in the window.</li>
+  </ol>
+
+  <footer>
+    <a href="https://app.lava.top/products/e75212a0-33ef-45e0-a03a-c9e5e09d48e2">Support the project</a>
+  </footer>
+</main>
+</body>
+</html>
